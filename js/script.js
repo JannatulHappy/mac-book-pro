@@ -5,6 +5,7 @@ const total = document.getElementById('total')
 const macBookPrice = document.getElementById('best-price')
 const promoInput = document.getElementById('promo-input')
 const discountPriceText = document.getElementById('discount-price')
+const discountText = document.getElementById('discount-text')
 // function for calculate item cost
 function getItemCost(item, price){
     const itemCost = document.getElementById(item);
@@ -61,10 +62,11 @@ function discount(){
     promoCode = promoInput.value
     if (promoCode == 'stevekaku') {
         discountPriceText.innerText = parseInt((total.innerText /100)*80)
-        alert('wow!!you have got 20% discount')
+        discountText.innerText = 'Wow!!! you have got 20% discount!!'
     }
-    else (
+    else(
         alert('you have enterd wrong promo code')
+       
     )
     promoInput.value = ''
 }
